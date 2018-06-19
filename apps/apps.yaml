@@ -1,0 +1,31 @@
+commande_lumiere_salon:
+  module: lights_cycle_brightness
+  class: Lights_Cycle_Brightness
+  switch_id: binary_sensor.pb_7_sejour
+  light_id: light.lumiere_salon
+  on_off_delay: 0.5
+  delay: 0.1
+  step: 10
+  minimum: 5
+  maximum: 255
+
+commande_lumiere_table:
+  module: lights_cycle_brightness
+  class: Lights_Cycle_Brightness
+  switch_id: binary_sensor.pb_8_sejour
+  light_id: light.table_salon
+  on_off_delay: 0.5
+  delay: 0.1
+  step: 10
+  minimum: 5
+  maximum: 255
+
+commande_lumiere_garage:
+  module: motion_light
+  class: Motion_Light_Switch
+  light: light.garage
+  motion_sensors: binary_sensor.detecteur_garage
+  switches: binary_sensor.pb_garage_escalier
+  motion_delay: 120
+  exit_delay: 5
+  debug: no
